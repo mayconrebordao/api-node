@@ -19,7 +19,7 @@ module.exports = (req, res, next) =>{
           .status(412)
           .send({
             error:
-              "One or more conditions given in the request header fields evaluated to false when tested on the server. Token format invalid."
+              "One or more conditions given in the request header fields evaluated to false when tested on the server. Token format invalid or Token not fount in headers."
           });
     }
 
@@ -31,7 +31,7 @@ module.exports = (req, res, next) =>{
 
     jwt.verify(token, authConfig.secret, (error, decoded) => {
         if(error){
-            return res.status(412).send({ error: "One or more conditions given in the request header fields evaluated to false when tested on the server. Token invalid." });           
+            return res.status(412).send({ error: "One or more conditions given in the request header fields evaluated to false when tested on the server. Token invalid or token not fund in headers." });           
         }
         req.userId = decoded.id;
         return next();

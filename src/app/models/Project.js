@@ -18,9 +18,8 @@ const ProjectSchema = new mongoose.Schema({
   },
   tasks: [{
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Task',
-  }]
-  ,
+      ref: 'Task'
+  }],
   crearedAt: {
     type: Date,
     default: Date.now

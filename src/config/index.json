@@ -1,0 +1,22 @@
+{   
+    "requiriments":{
+        "authenticate": {
+            "router": {
+                "url": "exemple: 'api.service.com' ",
+                "path": "/authenticate"
+            }
+        },
+        "register":{
+            "router": {
+                "url": "exemple: 'api.service.com' ",
+                "path": "/register"
+            }
+        }
+    },
+    "methods": {
+        "get": {
+
+        }
+    }
+
+}
